@@ -9,8 +9,8 @@ from flask import Flask, request, redirect, jsonify
 app = Flask(__name__)
 
 # Put your Spotify app credentials here
-os.environ["SPOTIPY_CLIENT_ID"] = ""
-os.environ["SPOTIPY_CLIENT_SECRET"] = ""
+os.environ["SPOTIPY_CLIENT_ID"] = "[INSERT CLIENT ID HERE]"
+os.environ["SPOTIPY_CLIENT_SECRET"] = "[INSERT CLIENT SECRET HERE]"
 os.environ["SPOTIPY_REDIRECT_URI"] = "http://localhost:8888/callback"
 
 scope = "user-top-read"
