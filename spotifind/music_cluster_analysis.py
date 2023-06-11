@@ -8,7 +8,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 
 # Connect to the SQLite database
-conn = sqlite3.connect("./spotify.db")
+conn = sqlite3.connect("db/spotify.db")
 
 # Load the data into a pandas DataFrame
 df = pd.read_sql_query("SELECT * FROM top_Tracks", conn)

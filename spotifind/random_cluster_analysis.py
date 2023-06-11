@@ -9,8 +9,8 @@ import numpy as np
 
 def run_music_cluster_analysis():
     # Connect to the SQLite database
-    conn_spotify = sqlite3.connect("./spotify.db")
-    conn_tracks = sqlite3.connect("./tracks.db")
+    conn_spotify = sqlite3.connect("db/spotify.db")
+    conn_tracks = sqlite3.connect("db/tracks.db")
 
     # Load the data into a pandas DataFrame
     df_spotify = pd.read_sql_query("SELECT * FROM top_Tracks", conn_spotify)

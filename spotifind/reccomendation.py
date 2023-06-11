@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
 # Establish a connection to the SQLite database
-conn = sqlite3.connect('spotify.db')
+conn = sqlite3.connect('db/spotify.db')
 
 # Load the top_Tracks and random_Tracks tables into pandas dataframes
 top_tracks_df = pd.read_sql_query("SELECT * from top_Tracks", conn)

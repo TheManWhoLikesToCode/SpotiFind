@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
-import personal_spotify_track_collection
-from top_cluster_analysis import run_top_cluster_analysis
-import kmeans_clustering
-from random_cluster_analysis import run_music_cluster_analysis
+from spotifind import personal_spotify_track_collection
+from spotifind.top_cluster_analysis import run_top_cluster_analysis
+from spotifind import kmeans_clustering
+from spotifind.random_cluster_analysis import run_music_cluster_analysis
 
 
 def main():
@@ -37,7 +37,7 @@ def main():
     if close_db:
         with st.spinner('Closing the database...'):
             try:
-                conn = sqlite3.connect('spotify.db')
+                conn = sqlite3.connect('db/spotify.db')
                 conn.close()
                 st.success("Database closed successfully.")
             except FileNotFoundError:
@@ -53,7 +53,7 @@ def main():
                 st.success(
                     "Finished running the personal_spotify_track_collection.py script")
 
-        conn = sqlite3.connect('spotify.db')
+        conn = sqlite3.connect('db/spotify.db')
         top_tracks_df = pd.read_sql_query("SELECT * from top_Tracks", conn)
         st.dataframe(top_tracks_df)
 
@@ -87,7 +87,7 @@ def main():
 
     if show_random_tracks:
         with st.spinner('Showing random tracks...'):
-            conn = sqlite3.connect('tracks.db')
+            conn = sqlite3.connect('db/tracks.db')
             random_tracks_df = pd.read_sql_query(
                 "SELECT * from random_Tracks", conn)
             st.dataframe(random_tracks_df)

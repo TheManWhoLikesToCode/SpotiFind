@@ -13,7 +13,7 @@ json_files = [file for file in os.listdir(
     'Training Data/data') if file.endswith('.json')]
 
 # Establish a connection to the database
-conn = sqlite3.connect('tracks.db')
+conn = sqlite3.connect('db/tracks.db')
 c = conn.cursor()
 
 # Create the "random_Tracks" table if it doesn't exist
