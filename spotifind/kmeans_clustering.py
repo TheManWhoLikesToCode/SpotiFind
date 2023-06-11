@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 
 def run_kmeans_clustering():
     # Establish a connection to the SQLite database
-    conn = sqlite3.connect('db/potify.db')
+    conn = sqlite3.connect('db/spotify.db')
 
     # Check if the 'top_Tracks' table exists
     cursor = conn.cursor()
