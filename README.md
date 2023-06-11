@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="support/SpotiFind.png" alt="SpotiFind Logo">
+</p>
+
 # Spotify-Recommendation-System
 
 ## Description
@@ -32,6 +36,21 @@ KMeans algorithm is used for clustering. Songs are assigned to clusters based on
 
 ### Evaluation
 The model evaluates the defining characteristics of each cluster and visualizes the clusters for analysis. The songs in each cluster are recommended to the user based on their preferences.
+
+## Results and Demonstration
+<p align="center">
+  <img src="support/Demonstration.gif" alt="Demonstration" width="1280" height="720">
+</p>
+
+<p align="center">
+  <img src="support/Figure_1.png" alt="Figure 1" width="480">
+</p>
+
+<p align="center">
+  <img src="support/Figure_2.png" alt="Figure 2" width="480">
+</p>
+
+Include videos and images to demonstrate the application's functionality and results.
 
 ## Accompanying Paper
 The project is accompanied by a paper titled "Audio Feature K-Means Cluster-Based Song Recommendation" by Jaydin Freeman, which goes into a more detailed technical discussion, results, and conclusions. The paper also contains an appendix of code and references.
