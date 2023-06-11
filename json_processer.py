@@ -5,8 +5,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 # Spotify API credentials
-client_id = 'bfea279ccc98417494c543754d8e6f17'
-client_secret = '7c833503391142ccae0eda7750ada208'
+client_id = '[INSERT CLIENT ID HERE]'
+client_secret = '[INSERT CLIENT SECRET HERE]'
 
 # Get the list of JSON files in the directory
 json_files = [file for file in os.listdir(
